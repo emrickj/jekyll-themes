@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<title>{{ site.title | default: site.github.repository_name }}</title>
+<style>
+  .affix {
+      top: 0px;
+  }
+#title {
+   white-space: nowrap;
+}
+h3[id] {color:#2196F3;}
+li span {color:#4CAF50;}
+   </style>
+</head>
+<body id="demo">
+<nav class="navbar navbar-default navbar-fixed-top hidden-sm hidden-md hidden-lg">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">{{ site.title | default: site.github.repository_name }}</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+	{% for item in site.webpages %}
+		{% assign bs = "" %}
+		{% if page.url == item.url %}
+		    {% assign bs = " class='active'" %}
+		{% endif %}
+        <li{{ bs }}><a href='{{ item.url | relative_url }}'>{{ item.title }}</a></li>
+	{% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>
+   <div class="container-fluid">
+      <div class="hidden-sm hidden-md hidden-lg" style="padding-top: 50px;"></div>
+      <div style="padding: 20px">
+         <b><h2 style="text-align: center;">{{ site.title | default: site.github.repository_name }}</h2></b>
+      </div>
+   </div>
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-3">
+             <div class="hidden-xs" style="padding: 20px" data-spy="affix" data-offset-top="103">
+                <div class="btn-group-vertical btn-group-lg">
+		   {% for item in site.webpages %}
+			{% assign bs = "" %}
+			{% if page.url == item.url %}
+			    {% assign bs = " active" %}
+			{% endif %}
+		   <a href='{{ item.url | relative_url }}' class='btn btn-primary{{ bs }}'>{{ item.title }}</a>
+		   {% endfor %}
+                </div>
+                <br>
+                <br>
+             </div>
+         </div>
+         <div class="col-sm-9" style="padding-top: 20px">
+           <div class="panel panel-primary">
+               <div class="panel-body">
+                  {% if page.image_url %}
+                  <img src='{{ page.image_url | relative url }}' style='width: 100%;height: auto;'>
+                  <br>
+                  {% endif %}
+                  {{ content }}
+               </div>
+           </div>
+         </div>
+      </div>
+      <center>This theme along with others can be found on <a href="https://github.com/emrickj/jekyll-themes">GITHUB</a>.</center>
+   </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
