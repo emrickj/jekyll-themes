@@ -13,7 +13,7 @@ t1 { white-space: pre-wrap;}
    </style>
 </head>
 <body class='page1' id='demo'>
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -41,6 +41,9 @@ t1 { white-space: pre-wrap;}
          <div class="col-sm-2">
          </div>
          <div class="col-sm-8">
+            <br>
+            <br>
+            <br>
             {% if page.image_url %}
             <img class='img-responsive' src='{{ page.image_url | relative url }}'>
             {% endif %}
