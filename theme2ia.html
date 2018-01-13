@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>{{ site.title | default: site.github.repository_name }}</title>
+<style>
+t1 { white-space: pre-wrap;}
+
+.affix {
+    top: 0;
+    width: 100%;
+}
+
+.affix + .container {
+    padding-top: 70px;
+}
+
+.bgimg {
+    background-image: url("{{ page.image_url | relative url }}");
+    background-color: #C0C0C0;
+    background-attachment: fixed;
+    background-position: center top;
+    background-size: auto 400px;
+    min-height: 400px;
+}
+
+
+
+   </style>
+</head>
+<body class='page1' id='demo'>
+<div class="bgimg"></div>
+<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="400" style="z-index: 5;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">{{ site.title | default: site.github.repository_name }}</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+	{% for item in site.webpages %}
+		{% assign bs = "" %}
+		{% if page.url == item.url %}
+		    {% assign bs = " class='active'" %}
+		{% endif %}
+        <li{{ bs }}><a href='{{ item.url | relative_url }}'>{{ item.title }}</a></li>
+	{% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>
+   <div class="container">
+     <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+           {{ content }}        </div>
+        <div class="col-sm-2">
+        </div>
+     </div>
+   </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
