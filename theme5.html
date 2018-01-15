@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>{{ site.title | default: site.github.repository_name }}</title>
+<style>
+t1 { white-space: pre-wrap;}
+
+
+   </style>
+</head>
+<body class='page1' id='demo'>
+<nav class="navbar navbar-default navbar-fixed-top hidden-sm hidden-md hidden-lg">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="?u=650">{{ site.title | default: site.github.repository_name }}</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+	{% for item in site.webpages %}
+		{% assign bs = "" %}
+		{% if page.url == item.url %}
+		    {% assign bs = " class='active'" %}
+		{% endif %}
+        <li{{ bs }}><a href='{{ item.url | relative_url }}'>{{ item.title }}</a></li>
+	{% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+	<div class="hidden-sm hidden-md hidden-lg" style="padding-top: 50px;"></div>
+	<div style="padding-top: 20px;"></div>
+   <div class="panel panel-default">
+	   <div class="panel-heading hidden-xs">
+		 <svg height="60" width="450">
+			<filter id="lightMe1">
+			  <feDiffuseLighting in="SourceGraphic" result="light"
+				 lighting-color="white">
+				 <fePointLight x="200" y="60" z="100" />
+			  </feDiffuseLighting>
+			  <feComposite in="SourceGraphic" in2="light"
+				 operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/>
+			</filter>
+			<text font-size="45" font-weight="bold" x="0" y="45" fill="rgb(191,191,255)" filter="url(#lightMe1)">{{ site.title | default: site.github.repository_name }}</text> 
+		 </svg>
+		  <ul class="list-inline">
+	{% for item in site.webpages %}
+		{% assign bs = "" %}
+		{% if page.url == item.url %}
+		    {% assign bs = " class='active'" %}
+		{% endif %}
+        <li{{ bs }}><a href='{{ item.url | relative_url }}'>{{ item.title }}</a></li>
+	{% endfor %}
+		  </ul>
+	   </div>
+	   <div class="panel-body">
+	      {% if page.image_url %}
+				<img class='img-responsive' style='display: block;margin: auto;' src='{{ page.image_url | relative url }}'>
+				{% endif %}
+{{ content }}
+	   </div>
+	   <div class="panel-footer" style="font-size: .83em;">
+        <center>This theme along with others can be found on <a href="https://github.com/emrickj/jekyll-themes">GITHUB</a>.</center>
+	   </div>
+   </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
