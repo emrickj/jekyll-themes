@@ -32,6 +32,10 @@ website_theme:
     desc: Navigation Bar, inverted, affix
     cssf: Bootstrap 3
     pwfn: 500
+  - name: 2prm
+    desc: Navigation Bar, blue
+    cssf: Bootstrap 4
+    pwfn: 511
   - name: 5
     desc: Horizontal Menu
     cssf: Bootstrap 3
