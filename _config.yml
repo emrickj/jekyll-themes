@@ -8,6 +8,10 @@ website_theme:
     desc: Vertical Button, affix
     cssf: Bootstrap 3
     pwfn: 501
+  - name: 1bs4
+    desc: Vertical Button
+    cssf: Bootstrap 4
+    pwfn: 511
   - name: 2
     desc: Navigation Bar
     cssf: Bootstrap 3
