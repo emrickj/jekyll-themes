@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>{{ site.title | default: site.github.repository_name }}</title>
+<style>
+@media (min-width: 576px) {
+	form label {text-align: right;}
+}
+
+
+   </style>
+</head>
+<body id="demo">
+<div class="d-block d-md-none">
+<nav class="navbar bg-dark navbar-dark fixed-top">
+  <a class="navbar-brand" href="http://www.gem-editor.com/gwc/theme1bs4.php">{{ site.title | default: site.github.repository_name }}</a>
+  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
+	<span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="navbar-nav">
+	{% for item in site.webpages %}
+		{% assign bs = "" %}
+		{% if page.url == item.url %}
+		    {% assign bs = " active" %}
+		{% endif %}
+        <li class='nav-item'><a class='nav-link{{ bs }}' href='{{ item.url | relative_url }}'>{{ item.title }}</a></li>
+	{% endfor %}
+	</ul>
+  </div>
+</nav>
+</div>
+   <div class="container" style="padding-bottom: 20px;">
+      <div class="d-block d-md-none" style="padding-top: 50px;"></div>
+      <div class="row">
+         <div class="col-md-3" style="padding: 20px" id="title">
+         <b><h2><center>{{ site.title | default: site.github.repository_name }}</center></h2></b>
+         </div>
+         <div class="col-md-9" style="padding-bottom: 20px;">
+            {% if page.image_url %}
+            <img class='img-fluid' src='{{ page.image_url | relative url }}'>
+            {% endif %}
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-3 d-none d-md-block">
+                  <br>
+                  <div class="btn-group-vertical btn-group-lg">
+                {% for item in site.webpages %}
+                  {% assign bs = "" %}
+                  {% if page.url == item.url %}
+                      {% assign bs = " active" %}
+                  {% endif %}
+                      <a href='{{ item.url | relative_url }}' class='btn btn-primary{{ bs }}'>{{ item.title }}</a>
+                {% endfor %}
+                  </div>
+                  <br>
+                  <br>
+         </div>
+         <div class="col-md-9">
+           <div class="card bg-light">
+               <div class="card-body">
+                     {{ content }}
+               </div>
+				<div class="card-footer">
+					<center>This theme along with others can be found on <a href="https://github.com/emrickj/jekyll-themes">GITHUB</a>.</center>
+				</div>			   
+           </div>
+         </div>
+      </div>
+   </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+</body>
+<script>
+
+//if ($(".container").height() < window.outerHeight)
+//   $(".container").height(window.outerHeight);
+
+</script>
+</html>
