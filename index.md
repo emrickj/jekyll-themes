@@ -40,6 +40,10 @@ website_theme:
     desc: Navigation Bar, blue
     cssf: Bootstrap 4
     pwfn: 511
+  - name: 2fprm
+    desc: Navigation Bar, fixed-top, blue
+    cssf: Bootstrap 4
+    pwfn: 511
   - name: 5
     desc: Horizontal Menu
     cssf: Bootstrap 3
