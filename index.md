@@ -12,6 +12,10 @@ website_theme:
     desc: Vertical Button 2
     cssf: Bootstrap 4
     pwfn: 511
+  - name: 1b4g
+    desc: Vertical Button, gradient theme
+    cssf: Bootstrap 4
+    pwfn: 512
   - name: 2
     desc: Navigation Bar
     cssf: Bootstrap 3
