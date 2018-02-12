@@ -52,6 +52,10 @@ website_theme:
     desc: Horizontal Menu
     cssf: Bootstrap 3
     pwfn: 501
+  - name: w1
+    desc: Sidebar
+    cssf: W3.CSS
+    pwfn: 509
 ---
 
 {% include table.html %}
