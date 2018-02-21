@@ -64,6 +64,10 @@ website_theme:
     desc: Sidebar
     cssf: W3.CSS
     pwfn: 509
+  - name: w1rd
+    desc: Sidebar, red
+    cssf: W3.CSS
+    pwfn: 510
 ---
 
 {% include table.html %}
