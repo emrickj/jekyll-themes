@@ -48,12 +48,20 @@ website_theme:
     desc: Navigation Bar, green
     cssf: Bootstrap 4
     pwfn: 511
+  - name: 2inf
+    desc: Navigation Bar, cyan
+    cssf: Bootstrap 4
+    pwfn: 511
   - name: 2fprm
     desc: Navigation Bar, fixed-top, blue
     cssf: Bootstrap 4
     pwfn: 511
   - name: 2fsuc
     desc: Navigation Bar, fixed-top, green
+    cssf: Bootstrap 4
+    pwfn: 511
+  - name: 2finf
+    desc: Navigation Bar, fixed-top, cyan
     cssf: Bootstrap 4
     pwfn: 511
   - name: 5
