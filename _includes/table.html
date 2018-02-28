@@ -21,7 +21,7 @@
        {% endif %} 
        {% for repository in site.github.public_repositories %}
           {% if repository.name == theme_name %}
-            {{ repository.name }}
+            <a class="action" title="GitHub Repository" href="{{ repository.html_url }}"><span class="link"></span></a>
           {% endif %}
        {% endfor %}
      </td>
