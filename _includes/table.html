@@ -20,7 +20,9 @@
        <a class="action" title="Preview" href="{{ site.preview_path | append: item.name }}.php?u={{ item.pwfn }}" target="_blank"><span class="preview"></span></a>
        {% endif %} 
        {% for repository in site.github.public_repositories %}
-          {{ repository.name }}
+          {% if repository.name == theme_name %}
+            {{ repository.name }}
+          {% endif %}
        {% endfor %}
      </td>
    </tr>
