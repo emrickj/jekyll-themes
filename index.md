@@ -96,6 +96,10 @@ website_theme:
     desc: Sidebar, yellow
     cssf: W3.CSS
     pwfn: 510
+  - name: w1gr
+    desc: Sidebar, grey
+    cssf: W3.CSS
+    pwfn: 510
 ---
 
 {% include table.html %}
