@@ -116,6 +116,10 @@ website_theme:
     desc: Sidebar, yellow
     cssf: W3.CSS
     pwfn: 510
+  - name: w1or
+    desc: Sidebar, orange
+    cssf: W3.CSS
+    pwfn: 510
   - name: w1gr
     desc: Sidebar, grey
     cssf: W3.CSS
