@@ -68,6 +68,10 @@ website_theme:
     desc: Navigation Bar, dark
     cssf: Bootstrap 4
     pwfn: 511
+  - name: 2lit
+    desc: Navigation Bar, light
+    cssf: Bootstrap 4
+    pwfn: 511
   - name: 2fprm
     desc: Navigation Bar, fixed-top, blue
     cssf: Bootstrap 4
@@ -94,6 +98,10 @@ website_theme:
     pwfn: 511
   - name: 2fdrk
     desc: Navigation Bar, fixed-top, dark
+    cssf: Bootstrap 4
+    pwfn: 511
+  - name: 2flit
+    desc: Navigation Bar, fixed-top, light
     cssf: Bootstrap 4
     pwfn: 511
   - name: 5
