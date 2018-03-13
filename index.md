@@ -104,6 +104,10 @@ website_theme:
     desc: Navigation Bar, fixed-top, light
     cssf: Bootstrap 4
     pwfn: 511
+  - name: 2fcd
+    desc: Navigation Bar, fixed-top, card style
+    cssf: Bootstrap 4
+    pwfn: 511
   - name: 5
     desc: Horizontal Menu
     cssf: Bootstrap 3
