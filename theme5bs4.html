@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>{{ site.title | default: site.github.repository_name }}</title>
+<style>
+@media (min-width: 576px) {
+	form label {text-align: right;}
+}
+
+
+</style>
+</head>
+<body class='page1' id='demo'>
+<div class="d-block d-md-none">
+<nav class="navbar bg-light navbar-light fixed-top">
+  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
+	<span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="navbar-nav">
+	{% for item in site.webpages %}
+		{% assign bs = "" %}
+		{% if page.url == item.url %}
+		    {% assign bs = " active" %}
+		{% endif %}
+        <li class='nav-item'><a class='nav-link{{ bs }}' href='{{ item.url | relative_url }}'>{{ item.title }}</a></li>
+	{% endfor %}
+	</ul>
+  </div>
+</nav>
+</div>
+<div class="container" style="padding-top: 20px;padding-bottom: 20px;">
+	<div class="d-block d-md-none" style="padding-top: 50px;"></div>
+   <div class="card">
+	   <div class="card-header bg-dark text-white">
+	     <div class="d-none d-md-block">
+			 <svg height="60" width="450">
+				<filter id="lightMe1">
+				  <feDiffuseLighting in="SourceGraphic" result="light"
+					 lighting-color="white">
+					 <fePointLight x="200" y="60" z="100" />
+				  </feDiffuseLighting>
+				  <feComposite in="SourceGraphic" in2="light"
+					 operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/>
+				</filter>
+				<text font-size="45" font-weight="bold" x="0" y="45" fill="white" filter="url(#lightMe1)">{{ site.title | default: site.github.repository_name }}</text> 
+			 </svg>
+		 </div>
+		 <div class="d-block d-md-none">
+		    {{ site.title | default: site.github.repository_name }}
+		 </div>
+	   </div>
+	   <div class="d-none d-md-block" style="padding: 5px;">
+		  <ul class="nav nav-pills">
+		{% for item in site.webpages %}
+			{% assign bs = "" %}
+			{% if page.url == item.url %}
+				{% assign bs = " active" %}
+			{% endif %}
+			<li class='nav-item'><a class='nav-link{{ bs }}' href='{{ item.url | relative_url }}'>{{ item.title }}</a></li>
+		{% endfor %}
+		  </ul>
+	   </div>
+	   {% if page.image_url %}
+	   <img src='{{ page.image_url | relative url }}' style='width: 100%;height: auto;'>
+	   {% endif %}
+	   <div class="card-body bg-light">
+				{{ content }}
+	   </div>
+	   <div class="card-footer" style="font-size: .83em;">
+			<center>This theme along with others can be found on <a href="https://github.com/emrickj/jekyll-themes">GITHUB</a>.</center>
+	   </div>
+   </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
