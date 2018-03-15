@@ -112,6 +112,10 @@ website_theme:
     desc: Horizontal Menu
     cssf: Bootstrap 3
     pwfn: 501
+  - name: 5bs4
+    desc: Horizontal Menu
+    cssf: Bootstrap 4
+    pwfn: 501
   - name: w1
     desc: Sidebar
     cssf: W3.CSS
