@@ -136,6 +136,10 @@ website_theme:
     desc: Sidebar, blue
     cssf: W3.CSS
     pwfn: 510
+  - name: w1lb
+    desc: Sidebar, light blue
+    cssf: W3.CSS
+    pwfn: 510
   - name: w1cy
     desc: Sidebar, cyan
     cssf: W3.CSS
