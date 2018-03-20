@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>{{ site.title | default: site.github.repository_name }}</title>
+<style>
+.band {border-style: solid solid none solid; padding: 15px 15px 0 15px;}
+#b1 {border-radius: 15px 15px 0 0;background-color: white;}
+#b2 {border-radius: 33px 33px 0 0;background-color: blue;}
+#b3 {border-radius: 51px 51px 0 0;background-color: yellow;}
+#b4 {border-radius: 69px 69px 0 0;background-color: red;}
+#title {
+  position: absolute;
+  top: 0px;
+  z-index: 10;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+#page-body {
+  padding: 15px;
+}
+@media (min-width: 576px) {
+	form label {text-align: right;}
+}
+@media (max-width: 575px) {
+	body {background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);}
+	.band {border-style: none; padding: 0;}
+	#b1 {border-radius: 0;}
+	#b2 {border-radius: 0;}
+	#b3 {border-radius: 0;}
+	#b4 {border-radius: 0;}
+}
+</style>
+</head>
+<body onload="setHeight();" onresize="setHeight();">
+	<div class="container" style="padding-top: 20px;">
+		<div class="band" id="b4">
+		<div class="band" id="b3">
+		<div class="band" id="b2">
+		<div class="band" id="b1">
+			<div class="d-none d-md-block" id="title">
+				<b><h2>{{ site.title | default: site.github.repository_name }}</h2></b>
+			</div>
+			{% if page.image_url %}
+			<img src='{{ page.image_url | relative url }}' style='width: 100%; height: auto;'>
+			{% endif %}
+			<nav class="navbar navbar-expand-md navbar-light">
+			  <a class="navbar-brand d-block d-md-none" href="#">{{ site.title | default: site.github.repository_name }}</a>
+			  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+				<div class="collapse navbar-collapse" id="myNavbar">
+				  <ul class="navbar-nav">
+				{% for item in site.webpages %}
+					{% assign bs = "" %}
+					{% if page.url == item.url %}
+						{% assign bs = " active" %}
+					{% endif %}
+					<li class='nav-item'><a class='nav-link{{ bs }}' href='{{ item.url | relative_url }}'>{{ item.title }}</a></li>
+				{% endfor %}
+				  </ul>
+				</div>
+			</nav>
+			<div class="bg-light" id="page-body">{{ content }}</div>
+			<div style="font-size: .83em;" id="footer">
+				<center>This theme along with others can be found on <a href="https://github.com/emrickj/jekyll-themes">GITHUB</a>.</center>
+			</div>
+		</div>
+		</div>
+		</div>
+		</div>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+<script>
+
+function setHeight() {
+$("#b1").css("height","initial");
+if ($("#b1").innerHeight() < (window.innerHeight - 77))
+   $("#b1").innerHeight(window.innerHeight - 77);
+}
+</script>
+</html>
