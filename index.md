@@ -124,6 +124,10 @@ website_theme:
     desc: Sidebar
     cssf: W3.CSS
     pwfn: 509
+  - name: w1at
+    desc: Sidebar, animated theme
+    cssf: W3.CSS
+    pwfn: 509
   - name: w1rd
     desc: Sidebar, red
     cssf: W3.CSS
