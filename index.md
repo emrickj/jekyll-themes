@@ -156,6 +156,10 @@ website_theme:
     desc: Sidebar, cyan
     cssf: W3.CSS
     pwfn: 510
+  - name: w1te
+    desc: Sidebar, teal
+    cssf: W3.CSS
+    pwfn: 510
   - name: w1grn
     desc: Sidebar, green
     cssf: W3.CSS
