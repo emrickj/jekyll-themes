@@ -140,6 +140,10 @@ website_theme:
     desc: Sidebar, purple
     cssf: W3.CSS
     pwfn: 510
+  - name: w1dp
+    desc: Sidebar, deep purple
+    cssf: W3.CSS
+    pwfn: 510
   - name: w1in
     desc: Sidebar, indigo
     cssf: W3.CSS
