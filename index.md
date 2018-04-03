@@ -172,6 +172,10 @@ website_theme:
     desc: Sidebar, light green
     cssf: W3.CSS
     pwfn: 510
+  - name: w1li
+    desc: Sidebar, lime
+    cssf: W3.CSS
+    pwfn: 510
   - name: w1kh
     desc: Sidebar, khaki
     cssf: W3.CSS
