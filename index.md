@@ -200,6 +200,10 @@ website_theme:
     desc: Sidebar, blue grey
     cssf: W3.CSS
     pwfn: 510
+  - name: w1br
+    desc: Sidebar, brown
+    cssf: W3.CSS
+    pwfn: 510
   - name: w1gr
     desc: Sidebar, grey
     cssf: W3.CSS
