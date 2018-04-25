@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>{{ site.title | default: site.github.repository_name }}</title>
+<style>
+@media (min-width: 601px) {
+	.label {text-align: right; padding-top: 8px; padding-right: 10px;}
+}
+
+
+   </style>
+</head>
+<body>
+
+<div class="w3-container w3-blue w3-center">
+  <h1 style="text-shadow:1px 1px 0 #444">{{ site.title | default: site.github.repository_name }}</h1>
+</div>
+
+<!-- Navigation bar -->
+<div class="w3-bar w3-black">
+{% for item in site.webpages %}
+	{% assign bs = "" %}
+	{% if page.url == item.url %}
+		{% assign bs = " w3-gray" %}
+	{% endif %}
+	<a href='{{ item.url | relative_url }}' class='w3-bar-item w3-button w3-hide-small{{ bs }}'>{{ item.title }}</a>
+{% endfor %}
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+</div>
+<div id="demo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
+{% for item in site.webpages %}
+	{% assign bs = "" %}
+	{% if page.url == item.url %}
+		{% assign bs = " w3-gray" %}
+	{% endif %}
+	<a href='{{ item.url | relative_url }}' class='w3-bar-item w3-button{{ bs }}'>{{ item.title }}</a>
+{% endfor %}
+</div>
+
+<!-- Page Content -->
+<div class="w3-main">
+
+{% if page.image_url %}
+<img class='w3-image' src='{{ page.image_url | relative url }}' style='width:100%'>
+{% endif %}
+
+<div class="w3-container">
+{{ content }}
+</div>
+<div class="w3-container w3-light-grey w3-center">
+    <h6>This theme along with others can be found on <a href="https://github.com/emrickj/jekyll-themes">GITHUB</a>.</h6>
+</div>
+</div>
+
+<script>
+
+function myFunction() {
+    var x = document.getElementById("demo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
