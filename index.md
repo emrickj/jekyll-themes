@@ -220,6 +220,10 @@ website_theme:
     desc: Sidebar, w3schools
     cssf: W3.CSS
     pwfn: 510
+  - name: w8
+    desc: Navigation Bar
+    cssf: W3.CSS
+    pwfn: 509
 ---
 
 {% include table.html %}
