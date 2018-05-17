@@ -9,11 +9,11 @@ website_theme:
     cssf: Bootstrap 4
     pwfn: 511
   - name: 1b4a
-    desc: Vertical Button 2
+    desc: Sunset
     cssf: Bootstrap 4
     pwfn: 511
   - name: 1b4g
-    desc: Vertical Button, gradient theme
+    desc: Tower
     cssf: Bootstrap 4
     pwfn: 512
   - name: 2
