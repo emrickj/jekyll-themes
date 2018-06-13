@@ -39,7 +39,7 @@
          <div class="col-md-8">
 			<div class="card bg-light">
 				{% if page.image_url %}
-				<img class='card-img-top' src='{{ page.image_url | relative url }}' alt='Card image'>
+				<img class='card-img-top' src='{{ page.image_url | relative url }}' alt='Card image' style='min-height: 1px;'>
 				{% endif %}
 				<div class='card-body'>
 					{{ content }}
